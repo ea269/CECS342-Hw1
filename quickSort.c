@@ -10,9 +10,9 @@ int partition(int arr[], int low, int high);
 
 void printArray(int arr[], int size) {
     for (int i = 0; i < size; i++) {
-        printf("%d ", arr[i]);
+        printf("%d ", arr[i]); // %d prints int as decimal
     }   
-    printf("\n");
+    printf("\n"); // prevents % at the end of line
 }
 
 int main() {
