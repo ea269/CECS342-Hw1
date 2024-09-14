@@ -8,7 +8,11 @@ void quicksortRecursion(int arr[], int low, int high);
 
 int partition(int arr[], int low, int high);
 
-void printArray(in arr[], int size);
+void printArray(in arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d", a[i]);
+    }   
+}
 
 int main() {
     // Test case
