@@ -16,8 +16,10 @@ void printArray(int arr[], int size) {
 
 int main() {
     // Test case
-    int arr[] = {3, 8 ,5, 1, 0, 7, 9, 2, 6, 4};
-    int size = sizeof(arr) / sizeof(arr[0]);
+    int array[] = {3, 8 ,5, 1, 0, 7, 9, 2, 6, 4};
+    int arraySize = sizeof(array) / sizeof(array[0]);
+
+    printArray(array, arraySize);
 
     return 0;
 }
