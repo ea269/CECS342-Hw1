@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-void swap(int *x, int *y);
+void swap(int *x, int *y) {
+    int temp = *x; // dereference pointer
+    *x = *y;
+    *y = temp;
+}
 
 void quicksort(int arr[], int length);
 
