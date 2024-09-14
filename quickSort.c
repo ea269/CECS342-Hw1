@@ -6,7 +6,21 @@ void swap(int *x, int *y) {
     *y = temp;
 }
 
-int partition(int arr[], int low, int high);
+int partition(int arr[], int low, int high) {
+    int pivotValue = arr[high]; // assume pivot is last element in portion of array
+    
+    int i = low; // i is incremented when its less than or equal to pivot value
+    for (int j = low; j < high; j++) { // j after every iteration of loop
+        if (arr[j] <= pivotValue) {
+            swap(&arr[i], &arr[j]);
+            i++;
+        }
+    }
+
+    swap(&arr[i], &arr[high]); // swap when k is no longer more than high
+
+    return i;
+}
 
 void quicksortRecursion(int arr[], int low, int high) {
     if (low < high) { // stops recursion condition
@@ -34,6 +48,8 @@ int main() {
     int array[] = {3, 8 ,5, 1, 0, 7, 9, 2, 6, 4};
     int arraySize = sizeof(array) / sizeof(array[0]);
 
+    printArray(array, arraySize);
+    quicksort(array, arraySize);
     printArray(array, arraySize);
 
     return 0;
