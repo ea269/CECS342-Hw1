@@ -6,11 +6,21 @@ void swap(int *x, int *y) {
     *y = temp;
 }
 
-void quicksort(int arr[], int length);
-
-void quicksortRecursion(int arr[], int low, int high);
-
 int partition(int arr[], int low, int high);
+
+void quicksortRecursion(int arr[], int low, int high) {
+    if (low < high) { // stops recursion condition
+        int pivotIndex = partition(arr, low, high); // divide and conquer, returns index
+        quicksortRecursion(arr, low, pivotIndex -1); // left side of array
+        quicksortRecursion(arr, pivotIndex +1, high); // right side of array
+    }
+}
+
+void quicksort(int arr[], int length) {  
+    // wrapper function to make it easier
+    //user doesnt input low and high just array and length
+    quicksortRecursion(arr, 0, length -1); 
+}
 
 void printArray(int arr[], int size) {
     for (int i = 0; i < size; i++) {
