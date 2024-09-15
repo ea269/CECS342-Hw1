@@ -36,10 +36,3 @@ void quick_sort(int *a, int n) {
     //user doesnt input low and high just array and length
     quicksortRecursion(a, 0, n - 1); 
 }
-
-void printArray(int arr[], int size) {
-    for (int i = 0; i < size; i++) {
-        printf("%d ", arr[i]); // %d prints int as decimal
-    }   
-    printf("\n"); // prevents % at the end of line
-}
