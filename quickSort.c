@@ -22,11 +22,11 @@ int partition(int arr[], int low, int high) {
     return i;
 }
 
-void quicksortRecursion(int arr[], int low, int high) {
+void quicksortRecursion(int *a, int low, int high) {
     if (low < high) { // stops recursion condition
-        int pivotIndex = partition(arr, low, high); // divide and conquer, returns index
-        quicksortRecursion(arr, low, pivotIndex -1); // left side of array
-        quicksortRecursion(arr, pivotIndex +1, high); // right side of array
+        int pivotIndex = partition(a, low, high); // divide and conquer, returns index
+        quicksortRecursion(a, low, pivotIndex -1); // left side of array
+        quicksortRecursion(a, pivotIndex +1, high); // right side of array
     }
 }
 
