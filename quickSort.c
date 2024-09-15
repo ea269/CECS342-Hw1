@@ -31,7 +31,7 @@ void quicksortRecursion(int arr[], int low, int high) {
     }
 }
 
-void quicksort(int *a, int n) {  
+void quick_sort(int *a, int n) {  
     // wrapper function to make it easier
     //user doesnt input low and high just array and length
     quicksortRecursion(a, 0, n - 1); 
