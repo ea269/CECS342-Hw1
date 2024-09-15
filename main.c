@@ -12,9 +12,13 @@ int main() {
     // Test case
     int array[] = {3, 8 ,5, 1, 0, 7, 9, 2, 6, 4};
     int arraySize = sizeof(array) / sizeof(array[0]);
-
+    
+    printf("Array: ");
     printArray(array, arraySize);
+
     quick_sort(array, arraySize);
+
+    printf("Quick sorted Array: ");
     printArray(array, arraySize);
 
     return 0;
