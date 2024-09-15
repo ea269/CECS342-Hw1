@@ -14,7 +14,7 @@ int main() {
     int arraySize = sizeof(array) / sizeof(array[0]);
 
     printArray(array, arraySize);
-    quicksort(array, arraySize);
+    quick_sort(array, arraySize);
     printArray(array, arraySize);
 
     return 0;
