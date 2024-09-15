@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "quicksort.h"
+#include "quickSort.h"
 
 void swap(int *x, int *y) {
     int temp = *x; // dereference pointer
