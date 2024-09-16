@@ -17,7 +17,6 @@ int partition(int arr[], int low, int high) {
             i++;
         }
     }
-
     swap(&arr[i], &arr[high]); // swap when k is no longer more than high
 
     return i;

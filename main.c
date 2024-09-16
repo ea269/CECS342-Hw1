@@ -20,6 +20,7 @@ int main() {
     printArray(array1, size1);
     printf("\n");
 
+
     // Test Case 2: Empty array
     int array2[] = {};
     int size2 = sizeof(array2) / sizeof(array2[0]);
@@ -31,6 +32,7 @@ int main() {
     printArray(array2, size2);
     printf("\n");
 
+
     // Test Case 3: Already sorted array
     int array3[] = {1, 2, 3, 4, 5};
     int size3 = sizeof(array3) / sizeof(array3[0]);
@@ -41,6 +43,7 @@ int main() {
     printf("Quick Sorted array 3: ");
     printArray(array3, size3);
     printf("\n");
+
 
     // Test Case 4: Array with duplicate elements
     int array4[] = {1, 1, 1, 1, 1};
