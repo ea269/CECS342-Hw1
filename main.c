@@ -16,7 +16,7 @@ int main() {
     printf("Original array 1: ");
     printArray(array1, size1);
     quick_sort(array1, size1);
-    printf("Sorted array 1: ");
+    printf("Quick Sorted array 1: ");
     printArray(array1, size1);
     printf("\n");
 
@@ -27,7 +27,7 @@ int main() {
     printf("Original array 2 (empty): ");
     printArray(array2, size2);
     quick_sort(array2, size2);
-    printf("Sorted array 2: ");
+    printf("Quick Sorted array 2: ");
     printArray(array2, size2);
     printf("\n");
 
@@ -38,7 +38,7 @@ int main() {
     printf("Original array 3 (sorted): ");
     printArray(array3, size3);
     quick_sort(array3, size3);
-    printf("Sorted array 3: ");
+    printf("Quick Sorted array 3: ");
     printArray(array3, size3);
     printf("\n");
 
@@ -49,7 +49,7 @@ int main() {
     printf("Original array 4 (duplicates): ");
     printArray(array4, size4);
     quick_sort(array4, size4);
-    printf("Sorted array 4: ");
+    printf("Quick Sorted array 4: ");
     printArray(array4, size4);
     printf("\n");
 
