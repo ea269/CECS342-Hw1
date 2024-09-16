@@ -9,4 +9,4 @@ void swap(int *x, int *y);
 
 int partition(int arr[], int low, int high);
 
-#endif // QUICKSORT_H
+#endif 
