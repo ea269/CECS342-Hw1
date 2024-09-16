@@ -27,16 +27,49 @@ void printArray(int arr[], int size) {
 }
 
 int main() {
-    array = readArrayFromFile("randomArray.txt", &arraySize); // Read array from file
-    int arraySize = sizeof(array) / sizeof(array[0]); // this will get the size
+    // Test Case 1: Normal unsorted array
+    int array1[] = {3, 2, 4, 8, 1, 5, 9, 2, 6, 0, 7};
+    int size1 = sizeof(array1) / sizeof(array1[0]);
     
-    printf("Array:\n");
-    printArray(array, arraySize);
+    printf("Original array 1: ");
+    printArray(array1, size1);
+    quick_sort(array1, size1);
+    printf("Sorted array 1: ");
+    printArray(array1, size1);
+    printf("\n");
 
-    quick_sort(array, arraySize);
+    // Test Case 2: Empty array
+    int array2[] = {};
+    int size2 = sizeof(array2) / sizeof(array2[0]);
+    
+    printf("Original array 2 (empty): ");
+    printArray(array2, size2);
+    quick_sort(array2, size2);
+    printf("Sorted array 2: ");
+    printArray(array2, size2);
+    printf("\n");
 
-    printf("Quick sorted Array:\n");
-    printArray(array, arraySize);
+    // Test Case 3: Already sorted array
+    int array3[] = {1, 2, 3, 4, 5};
+    int size3 = sizeof(array3) / sizeof(array3[0]);
+    
+    printf("Original array 3 (sorted): ");
+    printArray(array3, size3);
+    quick_sort(array3, size3);
+    printf("Sorted array 3: ");
+    printArray(array3, size3);
+    printf("\n");
+
+    // Test Case 4: Array with duplicate elements
+    int array4[] = {1, 1, 1, 1, 1};
+    int size4 = sizeof(array4) / sizeof(array4[0]);
+    
+    printf("Original array 4 (duplicates): ");
+    printArray(array4, size4);
+    quick_sort(array4, size4);
+    printf("Sorted array 4: ");
+    printArray(array4, size4);
+    printf("\n");
 
     return 0;
 }
