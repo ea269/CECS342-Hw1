@@ -1,7 +1,7 @@
 
 
 
-qS :: Ord a=> [a] -> [a] 
+qS :: Ord a => [a] -> [a] 
 qS [] = []
 qS (x:xs) = qS head ++ x:qS tail 
     where 
@@ -10,8 +10,11 @@ qS (x:xs) = qS head ++ x:qS tail
 
 main = do
     --empty_list []
-    putStr "Testing quicksort. \n qS With values = "
+    putStr "\nTesting quickSort With values = "
     print(qS [5, -1, 2,1,-1,23, 1000, -9999])
-    putStr "Testing quicksort. \n qS with floating point nums = "
+    putStr "\nTesting quickSort with floating point nums = "
     print(qS [0.05, 0.000125, 1.5, -3, 0])
-    
+    putStr "\nTesting quikSort with Char = "
+    print(qS["1", "a", "c" , "as", " ", "300", "40k", "0", "A", "Z"])
+    putStr "\nTesting quickSort with [] = "
+    --print(qS [])
