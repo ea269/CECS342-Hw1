@@ -1,6 +1,10 @@
 
-qs [] = []
-qs (x:xs) = qs lo ++ x:qs hi 
+
+
+qS :: Ord a=> [a] -> [a] 
+qS [] = []
+qS (x:xs) = qs head ++ x:qs tail 
     where 
-        lo = filter (<= x) xs
-        hi = filter (> x) xs
+        head = filter (<= x) xs
+        tail = filter (> x) xs
+
