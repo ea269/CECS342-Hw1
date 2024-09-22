@@ -14,5 +14,16 @@ merge (x:xs) (y:ys)
   | x <= y    = x : merge xs (y:ys)  -- add x to the result and merge the rest
   | otherwise = y : merge (x:xs) ys  -- add y to the result and merge the rest
 
--- mergeSort [32, 14, 24, 31, 5, 34, 27, 19, 35, 33, 3, 20, 8, 1, 2, 26, 13, 28, 15, 22, 16, 10, 4, 9, 7, 29, 25, 11, 18, 23, 12, 6, 17, 30, 21]
--- > [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35]
+main = do
+  print $ mergeSort ([] :: [Int])                     -- Test empty list
+  print $ mergeSort [3, 1, 2]                         -- Test integers
+  print $ mergeSort [5.5, 2.2, 4.4]                   -- Test floats
+  print $ mergeSort [1, 1, 2, 3, -3, -4]              -- Test negatives
+  print $ mergeSort ["z","a","d","h","s","t"]         -- Test letters
+  {- Output
+  []
+  [1,2,3]
+  [2.2,4.4,5.5]
+  [-4,-3,1,1,2,3]
+  ["a","d","h","s","t","z"]
+  -}
