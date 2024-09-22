@@ -1,0 +1,67 @@
+Observations and Comparison between Haskell and C
+
+The observations that I was noting down when comparing the quick sort and merge sort implementations in C and Haskell,you can tell there are clear differences because of how each language works. C is a procedural language, which means you write a series of steps for the computer to follow. In C, both quick sort and merge sort directly change the input array. Merge Sort in C needs extra memory for temporary arrays, so you have to allocate memory during the process and make sure to free it after. This can make the code a bit more complicated but efficient in terms of memory if done properly. C also requires careful handling of pointers and memory, which can lead to bugs if not managed correctly. Haskell is a functional language, which means it focuses on using functions and avoids changing data directly. Instead of changing the original list, the Haskell versions of quick sort and merge sort create new sorted lists. This happens because data in Haskell is fixed, meaning it can't be changed once created. The code in Haskell is often shorter and easier to follow, but it may use more memory since new lists are created each time. However, this immutability can make the code safer because there are fewer side effects. Both C and Haskell use recursion for these algorithms, but Haskell is better suited for recursive functions. In C, recursion requires more effort to manage and can sometimes lead to performance issues. In summary, C gives more control over how memory is used and can be more efficient, but Haskell makes the code easier to read and understand while reducing the risk of errors. In terms of test cases, both implementations were tested with arrays including normal unsorted data, empty arrays, already sorted arrays, and arrays with duplicate values.
+
+C Implementation
+
+Test Case 1: Normal unsorted array = tests the algorithm with an unsorted array of integers.
+
+Test Case 2: Empty array = ensure that the algorithm can handle an empty array
+
+Test Case 3: Already sorted array = Tests whether the algorithm correctly identifies a sorted array and leaves it unchanged.
+
+Test Case 4: Array with duplicate elements = To check that the algorithm can handle arrays with multiple identical values.
+
+
+Hasekell Implementation
+
+Test with integers = Tests sorting on a small unsorted list of integers.
+
+Test with floats = To check the ability to handle floating-point numbers.
+
+Test with negative values = Checks how the algorithm handles negative values alongside positive ones.
+
+Test with strings = Makes sure that the algorithm can sort strings alphabetically.
+
+Test with an empty list = To check how the algorithm responds to an empty list.
+
+
+
+Sources we used for this project : VS Code, NVIM, Geeks For Geeks, Youtube, Discord, Github
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
