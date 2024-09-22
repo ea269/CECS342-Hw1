@@ -27,7 +27,7 @@ Test with an empty list = to check how the algorithm responds to an empty list.
 
 
 
-Sources we used for this project : VS Code, NVIM, Geeks For Geeks, Youtube, Discord, Github
+Sources we used for this project : VS Code, NVIM, Geeks For Geeks, Youtube, Discord, Github, Stack Overflow, Haskell Textbook
 
 
 
