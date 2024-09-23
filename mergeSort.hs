@@ -1,3 +1,4 @@
+module MergeSort where
 mergeSort :: (Ord a) => [a] -> [a]
 mergeSort [] = []  -- Base case: an empty list
 mergeSort [x] = [x]  -- Base case: a single-element list
@@ -14,12 +15,12 @@ merge (x:xs) (y:ys)
   | x <= y    = x : merge xs (y:ys)  -- add x to the result and merge the rest
   | otherwise = y : merge (x:xs) ys  -- add y to the result and merge the rest
 
-main = do
-  print $ mergeSort ([] :: [Int])                     -- Test empty list
-  print $ mergeSort [3, 1, 2]                         -- Test integers
-  print $ mergeSort [5.5, 2.2, 4.4]                   -- Test floats
-  print $ mergeSort [1, 1, 2, 3, -3, -4]              -- Test negatives
-  print $ mergeSort ["z","a","d","h","s","t"]         -- Test letters
+---main = do
+  --print $ mergeSort ([] :: [Int])                     -- Test empty list
+  --print $ mergeSort [3, 1, 2]                         -- Test integers
+  --print $ mergeSort [5.5, 2.2, 4.4]                   -- Test floats
+  --print $ mergeSort [1, 1, 2, 3, -3, -4]              -- Test negatives
+  --print $ mergeSort ["z","a","d","h","s","t"]         -- Test letters
   {- Output
   []
   [1,2,3]
