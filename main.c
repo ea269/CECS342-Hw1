@@ -1,6 +1,28 @@
 #include <stdio.h>
 #include "quickSort.h"
+#include <time.h>
 
+typedef struct { // Struct to use test our algorithms time/speed
+    clock_t start;
+    clock_t end;
+} Timer;
+
+// Start timer
+void start_timer(Timer *timer) {
+    timer->start = clock();
+}
+
+// Stop the timer
+void stop_timer(Timer *timer) {
+    timer->end = clock();
+}
+
+// Calculate the time in seconds
+double get_elapsed_time(Timer *timer) {
+    return ((double)(timer->end - timer->start)) / CLOCKS_PER_SEC;
+}
+
+// Print the array
 void printArray(int arr[], int size) {
     for (int i = 0; i < size; i++) {
         printf("%d ", arr[i]); // %d prints int as decimal
@@ -9,6 +31,12 @@ void printArray(int arr[], int size) {
 }
 
 int main() {
+    // Initialize the timer
+    Timer timer; 
+    
+    // Start timer 
+    start_timer(&timer);
+
     // Test Case 1: Normal unsorted array
     int array1[] = {3, 2, 4, 8, 1, 5, 9, 2, 6, 0, 7};
     int size1 = sizeof(array1) / sizeof(array1[0]);
@@ -55,6 +83,11 @@ int main() {
     printf("Quick Sorted array 4: ");
     printArray(array4, size4);
     printf("\n");
+
+    // Stop timer
+    stop_timer(&timer);
+
+    printf("Time taken: %f seconds\n\n", get_elapsed_time(&timer));
 
     return 0;
 }
